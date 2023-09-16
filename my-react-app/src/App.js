@@ -5,7 +5,6 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <header className="App-header"></header>
       <div className="iniciar-sesin">
         <div className="div">
           <div className="sesion-button">
@@ -33,7 +32,7 @@ function App() {
           <img
             className="banco-falabella"
             alt="Banco falabella"
-            src="banco-falabella.png"
+            src="../public/banco-falabella.png"
           />
         </div>
       </div>
