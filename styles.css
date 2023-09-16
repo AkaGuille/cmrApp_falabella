@@ -1,0 +1,132 @@
+.iniciar-sesin {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.iniciar-sesin .div {
+  background-color: #ffffff;
+  height: 1289px;
+  position: relative;
+  width: 649px;
+}
+
+.iniciar-sesin .sesion-button {
+  height: 70px;
+  left: 30px;
+  position: absolute;
+  top: 884px;
+  width: 591px;
+}
+
+.iniciar-sesin .overlap-group {
+  background-color: #007933;
+  border-radius: 28px;
+  height: 70px;
+  position: relative;
+  width: 589px;
+}
+
+.iniciar-sesin .text-wrapper {
+  color: var(--blanco);
+  font-family: var(--normal-text-font-family);
+  font-size: var(--normal-text-font-size);
+  font-style: var(--normal-text-font-style);
+  font-weight: var(--normal-text-font-weight);
+  height: 25px;
+  left: 30px;
+  letter-spacing: var(--normal-text-letter-spacing);
+  line-height: var(--normal-text-line-height);
+  position: absolute;
+  text-align: center;
+  top: 23px;
+  white-space: nowrap;
+  width: 528px;
+}
+
+.iniciar-sesin .text-wrapper-2 {
+  color: var(--gris);
+  font-family: var(--minor-data-font-family);
+  font-size: var(--minor-data-font-size);
+  font-style: var(--minor-data-font-style);
+  font-weight: var(--minor-data-font-weight);
+  left: 105px;
+  letter-spacing: var(--minor-data-letter-spacing);
+  line-height: var(--minor-data-line-height);
+  position: absolute;
+  text-align: right;
+  top: 818px;
+  width: 514px;
+}
+
+.iniciar-sesin .contrasea-button {
+  height: 47px;
+  left: 30px;
+  position: absolute;
+  top: 752px;
+  width: 591px;
+}
+
+.iniciar-sesin .overlap {
+  background-color: #56af3129;
+  border-radius: 23.5px;
+  height: 47px;
+  position: relative;
+  width: 589px;
+}
+
+.iniciar-sesin .text-wrapper-3 {
+  color: var(--verde-primario);
+  font-family: var(--normal-text-v2-font-family);
+  font-size: var(--normal-text-v2-font-size);
+  font-style: var(--normal-text-v2-font-style);
+  font-weight: var(--normal-text-v2-font-weight);
+  height: 25px;
+  left: 30px;
+  letter-spacing: var(--normal-text-v2-letter-spacing);
+  line-height: var(--normal-text-v2-line-height);
+  position: absolute;
+  top: 11px;
+  width: 528px;
+}
+
+.iniciar-sesin .iconsax-bold {
+  height: 28px;
+  left: 538px;
+  position: absolute;
+  top: 10px;
+  width: 28px;
+}
+
+.iniciar-sesin .email-button {
+  height: 47px;
+  left: 30px;
+  position: absolute;
+  top: 659px;
+  width: 591px;
+}
+
+.iniciar-sesin .text-wrapper-4 {
+  color: var(--verde-primario);
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-size: 40px;
+  font-weight: 600;
+  left: 31px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 482px;
+  width: 589px;
+}
+
+.iniciar-sesin .banco-falabella {
+  height: 109px;
+  left: 150px;
+  object-fit: cover;
+  position: absolute;
+  top: 335px;
+  width: 351px;
+}
