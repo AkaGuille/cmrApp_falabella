@@ -1,3 +1,4 @@
+import * as React from 'react';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
@@ -8,6 +9,17 @@ import Grid from '@mui/material/Grid';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { lime, green } from '@mui/material/colors';
 import BancoFalabella from '../img/BancoFalabella.png';
+
+import IconButton from '@mui/material/IconButton';
+import Input from '@mui/material/Input';
+import FilledInput from '@mui/material/FilledInput';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputLabel from '@mui/material/InputLabel';
+import InputAdornment from '@mui/material/InputAdornment';
+import FormHelperText from '@mui/material/FormHelperText';
+import FormControl from '@mui/material/FormControl';
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 const themeFalabella = createTheme({
   palette: {
@@ -25,7 +37,17 @@ const themeFalabella = createTheme({
 })
 
 
+
 export default function Logger(){
+
+  const [showPassword, setShowPassword] = React.useState(false);
+
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+  const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+  };
+
   return(
     <ThemeProvider theme={themeFalabella}>
       <div>
@@ -35,8 +57,27 @@ export default function Logger(){
             Bienvenido de vuelta
           </Typography>
           <TextField id="outlined-basic" size="small" label="Usuario" variant="filled" sx={{ mt: '2rem', mx: 'auto', width: '30%', minWidth: 100}}/>
-          <TextField id="outlined-basic" size="small" label="Contraseña" variant="filled" sx={{ borderRadius: '50%', mt: '2rem', width: '30%'}}/>
-          <Button variant="contained" color="primary" sx={{mt: '2rem'}}>Iniciar sesión</Button>
+          
+          <FormControl sx={{ m: 1, width: '30%', mt: '2rem' }} variant="filled">
+          <InputLabel htmlFor="filled-adornment-password">Password</InputLabel>
+          <FilledInput
+            id="filled-adornment-password"
+            type={showPassword ? 'text' : 'password'}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                  edge="end"
+                >
+                  {showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            }
+          />
+        </FormControl>
+        <Button variant="contained" color="primary" sx={{mt: '2rem'}}>Iniciar sesión</Button>
         </Grid>
       </div>
     </ThemeProvider>
