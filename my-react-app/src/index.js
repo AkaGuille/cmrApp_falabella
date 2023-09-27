@@ -8,16 +8,10 @@ import reportWebVitals from './reportWebVitals';
 import TestC from './pages/TestC';
 import Logger from './pages/Logger';
 
-
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={ <App /> } />
-        <Route path="loginP" element={ <LoginP /> } />
-        <Route path="logger" element={ <Logger /> } />
-        <Route path='TestC' element={ <TestC/>}/>
-      </Routes>
+      <App/>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

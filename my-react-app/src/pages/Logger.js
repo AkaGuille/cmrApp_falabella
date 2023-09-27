@@ -51,7 +51,7 @@ export default function Logger(){
   return(
     <ThemeProvider theme={themeFalabella}>
       <div>
-        <Grid container spacing={2} justify='center' alignItems="center" direction="column" sx={{minWidth: 300, mt: '8rem'}}>
+        <Grid container spacing={2} justify='center' alignItems="center" direction="column" sx={{minWidth: 300, mt: '2rem'}}>
           <img src={BancoFalabella} alt='Logo Falabella' ></img>
           <Typography variant="h4" component="h3" color='primary' sx={{mt: '4rem'}}>
             Bienvenido de vuelta
