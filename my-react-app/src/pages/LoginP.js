@@ -1,3 +1,9 @@
+
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+
+
+
 export default function LoginP(){
   return(
 <div className="iniciar-sesin">
@@ -5,6 +11,7 @@ export default function LoginP(){
     <div className="sesion-button">
       <div className="overlap-group">
         <div className="text-wrapper">Iniciar Sesión</div>
+        <TextField id="outlined-basic" label="Outlined" variant="outlined" />
       </div>
     </div>
     <div className="text-wrapper-2">¿Olvidaste tu contraseña?</div>

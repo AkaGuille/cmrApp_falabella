@@ -5,6 +5,9 @@ import App from './App';
 import LoginP from './pages/LoginP';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
+import TestC from './pages/TestC';
+import Logger from './pages/Logger';
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,6 +15,8 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={ <App /> } />
         <Route path="loginP" element={ <LoginP /> } />
+        <Route path="logger" element={ <Logger /> } />
+        <Route path='TestC' element={ <TestC/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
