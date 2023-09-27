@@ -11,6 +11,7 @@ import LoginP from './pages/LoginP';
 import Navbar from "./Components/navbar";
 import Logger from "./pages/Logger";
 import TestC from "./pages/TestC";
+import BottomNav from "./Components/BottomNav";
 
 const themeFalabella = createTheme({
   palette: {
@@ -23,8 +24,8 @@ const themeFalabella = createTheme({
 function App() {
   return (
     <>
-      <Navbar/>
-      <ThemeProvider theme={themeFalabella}>
+      
+      <ThemeProvider theme={themeFalabella} >
         <main>
           <Routes>
             <Route path ='/' element={<Home />} />
@@ -33,6 +34,7 @@ function App() {
           </Routes>
         </main>
       </ThemeProvider>
+      <BottomNav/>
     </>
   );
 }

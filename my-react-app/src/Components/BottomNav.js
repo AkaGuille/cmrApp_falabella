@@ -1,38 +1,38 @@
-import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import { Link, useMatch, useNavigate, useResolvedPath } from "react-router-dom";
 import Grid from '@mui/material/Grid';
 import * as React from 'react';
 
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import RestoreIcon from '@mui/icons-material/Restore';
+/*import HomeIcon from '@mui/icons-material/Home';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import LocationOnIcon from '@mui/icons-material/LocationOn';*/
+import { FaHome } from "react-icons/fa";
+import { FaUserFriends } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
 
-export default function Navbar() {
+const fontStyles = {fontSize: '200px'};
+
+export default function BottomNav() {
 
   const [value, setValue] = React.useState(0);
+  const navigate = useNavigate();
 
   return(
     <Grid container spacing={2} justify='center' alignItems="center" direction="column" sx={{minWidth: 300, mt: '4rem'}}>
-      <nav className="nav">
-      <ul>                    
-        <CustomLink to={"/"}>Home</CustomLink>
-        <CustomLink to={"/Logger"}>Logger</CustomLink>
-        <CustomLink to={"/TestC"}>TestC</CustomLink>
-      </ul>
-    </nav>
 
-    <BottomNavigation
+    <BottomNavigation sx={{width:"75%", position: "absolute", bottom:0}}
         showLabels
         value={value}
         onChange={(event, newValue) => {
           setValue(newValue);
         }}
       >
-        <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-        <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+        <BottomNavigationAction label="Home" onClick={()=>navigate("/")} style={fontStyles} icon={<FaHome />} />
+        <BottomNavigationAction label="Social" onClick={()=>navigate("/logger")} style={fontStyles} icon={<FaUserFriends />} />
+        <BottomNavigationAction label="Shop" onClick={()=>navigate("/testC")} style={fontStyles} icon={<FaShoppingCart />} />
       </BottomNavigation>
+
     </Grid>
   )
 }
