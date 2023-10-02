@@ -29,7 +29,7 @@ export default function BottomNav() {
         }}
       >
         <BottomNavigationAction label="Home" onClick={()=>navigate("/")} style={fontStyles} icon={<FaHome />} />
-        <BottomNavigationAction label="Social" onClick={()=>navigate("/logger")} style={fontStyles} icon={<FaUserFriends />} />
+        <BottomNavigationAction label="Social" onClick={()=>navigate("/social")} style={fontStyles} icon={<FaUserFriends />} />
         <BottomNavigationAction label="Shop" onClick={()=>navigate("/testC")} style={fontStyles} icon={<FaShoppingCart />} />
       </BottomNavigation>
 

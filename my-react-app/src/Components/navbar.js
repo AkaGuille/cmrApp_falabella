@@ -1,4 +1,4 @@
-import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import { Link, useMatch, useNavigate, useResolvedPath } from "react-router-dom";
 import Grid from '@mui/material/Grid';
 import * as React from 'react';
 
@@ -11,13 +11,14 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 export default function Navbar() {
 
   const [value, setValue] = React.useState(0);
+  
 
   return(
     <Grid container spacing={2} justify='center' alignItems="center" direction="column" sx={{minWidth: 300, mt: '4rem'}}>
       <nav className="nav">
       <ul>                    
         <CustomLink to={"/"}>Home</CustomLink>
-        <CustomLink to={"/Logger"}>Logger</CustomLink>
+        <CustomLink to={"/social"}>Social</CustomLink>
         <CustomLink to={"/TestC"}>TestC</CustomLink>
       </ul>
     </nav>
