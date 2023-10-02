@@ -6,6 +6,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 //import pages
 import Home from './pages/Home';
 import LoginP from './pages/LoginP';
+import Social from './pages/Social';
 
 //import components
 import Navbar from "./Components/navbar";
@@ -31,6 +32,7 @@ function App() {
             <Route path ='/' element={<Home />} />
             <Route path ='logger' element={<Logger />} />
             <Route path ='testC' element={<TestC />} />
+            <Route path="social" element={<Social />} />
           </Routes>
         </main>
       </ThemeProvider>
