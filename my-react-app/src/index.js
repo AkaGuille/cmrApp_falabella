@@ -8,6 +8,12 @@ import reportWebVitals from './reportWebVitals';
 import TestC from './pages/TestC';
 import Logger from './pages/Logger';
 
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+  rel="stylesheet"
+/>
+
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>

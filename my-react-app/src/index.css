@@ -6,10 +6,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* src/index.css */
+/* Add this line to import Poppins CSS */
+@import url('typeface-poppins');
+
+/* Your other styles */
+
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Poppins', sans-serif; /* Replace the existing font stack with Poppins */
+}
+
+
+.poppins-font {
+  font-family: 'Poppins', sans-serif;
 }
 
 .iniciar-sesin {
