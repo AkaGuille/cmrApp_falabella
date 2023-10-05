@@ -49,7 +49,7 @@ export default function Logger() {
         justify="center"
         alignItems="center"
         direction="column"
-        sx={{ minWidth: 300, mt: "4rem" }}
+        sx={{ minWidth: 300, mt: "2rem" }}
       >
         <Grid
           container

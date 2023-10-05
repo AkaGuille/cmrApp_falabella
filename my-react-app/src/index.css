@@ -30,6 +30,37 @@ code {
   width: 100%;
 }
 
+.categories-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
+
+.category-wrapper {
+  white-space: nowrap;
+  overflow-x: auto;
+  padding: 16px;
+  display: flex;
+  align-items: center; /* Centrar verticalmente */
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.icon {
+  font-size: 24px;
+}
+
+.label {
+  margin-top: 8px
+}
+
 .iniciar-sesin .div {
   background-color: #ffffff;
   height: 1289px;
