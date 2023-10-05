@@ -9,12 +9,24 @@ import { styled } from "@mui/material/styles";
 import { Typography } from "@mui/material";
 import Divider from "@mui/material/Divider";
 import cmrFalla from "../img/cmrFalla.png";
+import IconButton from "@mui/material/IconButton";
+import { FaUserAlt } from "react-icons/fa";
+import crmFallaWhite from "../img/crmFallaWhite.png";
+import profilePic2 from "../img/profilePic2.png";
+import card2 from "../img/card2.png";
 
 const cardData = {
   name: "Andres López",
   points: "10.344 CMR",
   planImagePath: card1,
   profileImagePath: profilePic1,
+};
+
+const cardData2 = {
+  name: "Luisa Escarmiento",
+  points: "12.208 CMR",
+  planImagePath: card2,
+  profileImagePath: profilePic2,
 };
 
 const Img = styled("img")({
@@ -39,19 +51,44 @@ export default function Logger() {
         direction="column"
         sx={{ minWidth: 300, mt: "4rem" }}
       >
-        <h1 style={{ margin: 0, color: "#007933", fontWeight: "bold " }}>
-          Social
-        </h1>
-        <h3
-          style={{
-            margin: 0,
-            color: "#56AF31",
-            fontSize: "24px",
-            fontWeight: "normal",
-          }}
+        <Grid
+          container
+          item
+          spacing={2}
+          justify="space-between"
+          alignItems="center"
+          sx={{ width: "100%" }}
         >
-          Ranking
-        </h3>
+          <Grid
+            item
+            sx={{ flex: 1, textAlign: "left", ml: "2rem", mr: "-2rem" }}
+          >
+            <IconButton color="primary">
+              <FaUserAlt size={40} style={{ color: "white" }} />
+            </IconButton>
+          </Grid>
+          <Grid item sx={{ flex: 1, textAlign: "center" }}>
+            <Grid>
+              <Typography
+                variant="h4"
+                sx={{ color: "white", fontWeight: "bold" }}
+              >
+                Social
+              </Typography>
+              <Typography
+                variant="h6"
+                className="poppins-font"
+                sx={{ fontWeight: "regular", color: "#56AF31" }}
+              >
+                Ranking
+              </Typography>
+            </Grid>
+          </Grid>
+
+          <Grid item sx={{ flex: 1, textAlign: "right" }}>
+            <Typography variant="h6">c</Typography>
+          </Grid>
+        </Grid>
       </Grid>
       <Paper
         sx={{
@@ -63,8 +100,7 @@ export default function Logger() {
           boxShadow: "none",
           border: "none",
           outline: "none",
-          backgroundColor: (theme) =>
-            theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+          backgroundColor: "transparent"
         }}
       >
         <Grid container spacing={2}>
@@ -83,15 +119,19 @@ export default function Logger() {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center", // Centrar verticalmente
-                height: "100%", // Establecer una altura para que funcione el centrado vertical
+                height: "100%",
+                 // Establecer una altura para que funcione el centrado vertical
               }}
             >
               <Grid item>
-                <Img alt="complex" src={cmrFalla}></Img>
+                <Img alt="complex" src={crmFallaWhite} width="100"></Img>
               </Grid>
               <Grid item>
-                <GreenTextTypo variant="subtitle1" color="text.secondary" sx={{fontSize: "18px"}}>
-                + Puntos = + Beneficios
+                <GreenTextTypo
+                  variant="subtitle1"
+                  sx={{ fontSize: "18px", color: "white"}}
+                >
+                  + Puntos = + Beneficios
                 </GreenTextTypo>
               </Grid>
             </Grid>
@@ -109,14 +149,14 @@ export default function Logger() {
           </Grid>
         </Grid>
         <Grid>
-          <GreenTextTypo sx={{ fontSize: "22px", mt: "2rem" }}>
+          <GreenTextTypo sx={{ fontSize: "22px", mt: "2rem", color: "white", ml: "1rem"}}>
             Tus contactos en la app:
           </GreenTextTypo>
         </Grid>
       </Paper>
       <CardRank cardData={cardData}></CardRank>
       <Divider />
-      <CardRank cardData={cardData}></CardRank>
+      <CardRank cardData={cardData2}></CardRank>
       <Divider />
       <CardRank cardData={cardData}></CardRank>
     </div>
